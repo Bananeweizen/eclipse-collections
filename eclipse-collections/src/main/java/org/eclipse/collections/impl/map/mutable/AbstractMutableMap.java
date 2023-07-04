@@ -73,7 +73,7 @@ public abstract class AbstractMutableMap<K, V> extends AbstractMutableMapIterabl
     /**
      * Creates a new instance of the same type, using the given capacity and the default growth parameters.
      */
-    public abstract <K, V> MutableMap<K, V> newEmpty(int capacity);
+    public abstract <NK, NV> MutableMap<NK, NV> newEmpty(int capacity);
 
     @Override
     public MutableMap<K, V> asUnmodifiable()

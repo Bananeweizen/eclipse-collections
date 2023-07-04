@@ -711,7 +711,7 @@ public final class UnmodifiableStack<T> implements MutableStack<T>, Serializable
     }
 
     @Override
-    public <T> T[] toArray(T[] a)
+    public <AT> AT[] toArray(AT[] a)
     {
         return this.mutableStack.toArray(a);
     }

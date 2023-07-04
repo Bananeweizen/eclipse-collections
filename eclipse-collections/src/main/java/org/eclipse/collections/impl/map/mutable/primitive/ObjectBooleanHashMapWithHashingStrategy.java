@@ -1848,7 +1848,7 @@ public class ObjectBooleanHashMapWithHashingStrategy<K> implements MutableObject
             return new InternalKeysViewIterator<>();
         }
 
-        public class InternalKeysViewIterator<K> implements Iterator<K>
+        public class InternalKeysViewIterator<IK> implements Iterator<IK>
         {
             private int count;
             private int position;
@@ -1860,7 +1860,7 @@ public class ObjectBooleanHashMapWithHashingStrategy<K> implements MutableObject
             }
 
             @Override
-            public K next()
+            public IK next()
             {
                 if (!this.hasNext())
                 {
@@ -1872,7 +1872,7 @@ public class ObjectBooleanHashMapWithHashingStrategy<K> implements MutableObject
                 {
                     this.position++;
                 }
-                K result = (K) ObjectBooleanHashMapWithHashingStrategy.this.keys[this.position];
+                IK result = (IK) ObjectBooleanHashMapWithHashingStrategy.this.keys[this.position];
                 this.count++;
                 this.position++;
                 return result;

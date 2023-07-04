@@ -1065,7 +1065,7 @@ public abstract class AbstractSynchronizedRichIterable<T> implements RichIterabl
     }
 
     @Override
-    public <T> T[] toArray(T[] a)
+    public <AT> AT[] toArray(AT[] a)
     {
         synchronized (this.lock)
         {

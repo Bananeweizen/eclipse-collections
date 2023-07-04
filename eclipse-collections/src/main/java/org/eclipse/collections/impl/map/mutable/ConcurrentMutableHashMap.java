@@ -122,7 +122,7 @@ public final class ConcurrentMutableHashMap<K, V>
     }
 
     @Override
-    public <K, V> MutableMap<K, V> newEmpty(int capacity)
+    public <NK, NV> MutableMap<NK, NV> newEmpty(int capacity)
     {
         return ConcurrentMutableHashMap.newMap();
     }

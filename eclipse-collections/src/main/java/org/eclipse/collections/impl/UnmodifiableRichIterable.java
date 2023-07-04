@@ -208,7 +208,7 @@ public class UnmodifiableRichIterable<T>
     }
 
     @Override
-    public <T> T[] toArray(T[] a)
+    public <AT> AT[] toArray(AT[] a)
     {
         return this.iterable.toArray(a);
     }

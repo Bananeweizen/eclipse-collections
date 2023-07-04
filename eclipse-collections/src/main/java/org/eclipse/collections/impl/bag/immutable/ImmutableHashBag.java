@@ -602,7 +602,7 @@ public class ImmutableHashBag<T>
     }
 
     @Override
-    public <T> T[] toArray(T[] a)
+    public <AT> AT[] toArray(AT[] a)
     {
         return this.delegate.toArray(a);
     }

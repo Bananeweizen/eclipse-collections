@@ -1687,11 +1687,11 @@ public class UnifiedSet<T>
     }
 
     @Override
-    public <T> T[] toArray(T[] array)
+    public <AT> AT[] toArray(AT[] array)
     {
         int size = this.size();
-        T[] result = array.length < size
-                ? (T[]) Array.newInstance(array.getClass().getComponentType(), size)
+        AT[] result = array.length < size
+                ? (AT[]) Array.newInstance(array.getClass().getComponentType(), size)
                 : array;
 
         this.copyToArray(result);
